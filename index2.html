@@ -27,30 +27,72 @@
           </div>
       </div>
   </div>
-<header id="header" class="fixed-top">
-      <div class="container d-flex align-items-center">
-          <h1 class=" logo mr-auto"><span>新增表單</span></h1>
-              <h5 class="">需求單號:<span >Test </span></h5>
-      </div>
-      <nav class="col-5 nav-menu d-lg-block">
-          <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#team">Team</a></li>
-              <li><a href="#contact">Contact</a></li>
 
-          </ul>
-      </nav><!-- .nav-menu -->
-</header>
+<!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="row">
+            <div class="container d-flex align-items-center">
+
+                <h1 class="col-2 logo mr-auto"><span>新增表單</span></h1>
+                <div class="col-5 ">
+                    <h5 class="col-10">需求單號:<span id="eventclik" class="hover">Test </span></h5>
+                </div>
+
+                <!--模態視窗，用於輸入流水號以及些許表格細節，會順便檢查流水號是否重複-->
+                
+                <!-- <div class="modal fade" id="MyModal" tabindex="-1" role="dialog" data-backdrop="false"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">新增一份新的表單</h5>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="recipient-name" class="col-form-label">流水號: </label>
+                                        <input onblur="check_serial_number(this)" type="text" class="form-control"
+                                            id="modal_serial_number">
+                                        <label style="display: none;" id="serial_tips"></label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">今天日期:</label>
+                                        <input id="modal_today" type="date" />
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button onclick="modal_set_serial()" type="button" class="btn btn-primary">確定</button>
+                                <button onclick="modal_set_serial()" type="button" class="btn btn-secondary"
+                                    data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <nav class="col-5 nav-menu d-lg-block">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+
+                    </ul>
+                </nav><!-- .nav-menu -->
+
+            </div>
+        </div>
+    </header><!-- End Header -->
 
     <div class="row" style="margin-top: 200px;">
       <h1 class="col-10" style="text-align: center;">Hello, world!</h1>
       <h1 class="col-2" style="text-align: end;">okay</h1>
     </div>
     <div class="row">
-    <a href="index.html"><button class="btn">返回</button></a>
+    <a href="index.html"><button class="btn btn-primary">返回</button></a>
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
