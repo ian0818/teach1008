@@ -38,32 +38,41 @@
 
                 <h1 class="col-2 logo mr-auto" style="text-align: center;"><span>新增表單</span></h1>
                 <div class="col-5 ">
-                    <h5 class="col-10">需求單號:<span id="eventclik" class="hover" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">Test </span></h5>
+                    <h5 class="col-10">需求單號:<span id="eventclik" class="hover" ddata-bs-toggle="modal" data-bs-target="#exampleModal">Test </span></h5>
                 </div>
 
                 <!--模態視窗，用於輸入流水號以及些許表格細節，會順便檢查流水號是否重複-->
 
                 <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Understood</button>
-                            </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" data-bs-backdrop="false"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content" style="height:270px;">
+                        <div class="modal-header">
+                            <h5 class="modal-title" style="margin-top:10px" id="exampleModalLabel">新增一份新的表單</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <div style="text-align:left">
+                                    <label for="recipient-name" class="col-form-label">流水號: </label>
+                                    </div>
+                                    <input @blur="check_serial_number" type="text" class="form-control"
+                                        id="modal_serial_number">
+                                    <label style="display: none;" id="serial_tips"></label>
+                                </div>
+                                <!-- <div class="form-group">
+                                    <label for="message-text" class="col-form-label">今天日期:</label>
+                                    <input id="modal_today" type="date" />
+                                </div> -->
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button @click="modal_set_serial()" type="button" class="btn btn-primary" id="use_button" data-bs-dismiss="modal">確定</button>
                         </div>
                     </div>
                 </div>
+            </div>
 
                 <nav class="col-5 nav-menu d-lg-block">
                     <ul>
@@ -85,9 +94,9 @@
         <h1 class="col-10" style="text-align: center;">Hello, world!</h1>
         <h1 class="col-2" style="text-align: end;">okay11</h1>
     </div>
-    <div class="row">
-        <a href="index.html"><button class="btn btn-primary">返回</button></a>
-    </div>
+
+        <a href="index.html"><button  class="btn btn-primary">返回</button></a>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -110,7 +119,6 @@
 
     var test = document.getElementById('eventclik')
     test.addEventListener('click', function () {
-        console.log("222")
         // $('#MyModal').modal('show');
     }, true);
 
