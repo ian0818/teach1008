@@ -109,4 +109,29 @@
 
 <script>
 
+var test = document.getElementById('eventclik')
+test.addEventListener('click', function () {
+    console.log("222")
+        // $('#MyModal').modal('show');
+    }, true);
+    
+/**
+     * 網頁準備好時便會執行
+     */
+     $(document).ready(function () {
+        //滑鼠切換底色
+        $('.hover').each(function ()
+        //class名為demo的每一個(each)執行以下function
+        {
+            $(this).mouseover(function () {
+                $(this).css({ "background-color": "#C0C0C0", "color": "#FFFFFF", "display": "run-in" });
+                //被mouseover(被滑鼠滑過的.hover) 其css的background-color改為#33648B，文字顏色為#FFFFFF 
+            });
+
+            $(this).mouseout(function () {
+                $(this).css({ "background-color": "", "color": "#000000" });
+                //被mouseout(被滑鼠移出的.hover) 其css的background-color無設定，文字顏色為#000000 
+            });
+        });
+    });
 </script>
