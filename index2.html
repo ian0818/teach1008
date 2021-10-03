@@ -35,41 +35,28 @@
 
                 <h1 class="col-2 logo mr-auto" style="text-align: center;"><span>新增表單</span></h1>
                 <div class="col-5 ">
-                    <h5 class="col-10">需求單號:<span id="eventclik" class="hover">Test </span></h5>
+                    <h5 class="col-10">需求單號:<span id="eventclik" class="hover" data-bs-toggle="modal" data-bs-target="#exampleModal">Test </span></h5>
                 </div>
 
                 <!--模態視窗，用於輸入流水號以及些許表格細節，會順便檢查流水號是否重複-->
 
-                <!-- <div class="modal fade" id="MyModal" tabindex="-1" role="dialog" data-backdrop="false"
-                    aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">新增一份新的表單</h5>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="recipient-name" class="col-form-label">流水號: </label>
-                                        <input onblur="check_serial_number(this)" type="text" class="form-control"
-                                            id="modal_serial_number">
-                                        <label style="display: none;" id="serial_tips"></label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message-text" class="col-form-label">今天日期:</label>
-                                        <input id="modal_today" type="date" />
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button onclick="modal_set_serial()" type="button" class="btn btn-primary">確定</button>
-                                <button onclick="modal_set_serial()" type="button" class="btn btn-secondary"
-                                    data-dismiss="modal">Close</button>
-                            </div>
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
                     </div>
-                </div> -->
+                  </div>
 
                 <nav class="col-5 nav-menu d-lg-block">
                     <ul>
@@ -118,8 +105,9 @@ test.addEventListener('click', function () {
     }, true);
 
 /**
-     * 網頁準備好時便會執行
-     */
+    ** 網頁準備好時便會執行
+*/
+
      $(document).ready(function () {
         //滑鼠切換底色
         $('.hover').each(function ()
@@ -129,7 +117,6 @@ test.addEventListener('click', function () {
                 $(this).css({ "background-color": "#C0C0C0", "color": "#FFFFFF", "display": "run-in" });
                 //被mouseover(被滑鼠滑過的.hover) 其css的background-color改為#33648B，文字顏色為#FFFFFF 
             });
-
             $(this).mouseout(function () {
                 $(this).css({ "background-color": "", "color": "#000000" });
                 //被mouseout(被滑鼠移出的.hover) 其css的background-color無設定，文字顏色為#000000 
