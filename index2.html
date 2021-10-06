@@ -90,13 +90,14 @@
         </div>
     </header><!-- End Header -->
 
-    <button onclick="add_pic()" class="btn btn-outline-secondary" type="button" id="add_pic">添加一份照片</button>
        
-    <div id="addpic">
-
-    </div>
+    
 
     <div class="row" style="margin-top: 200px;">
+        <button class="col" onclick="add_pic()" class="btn btn-outline-secondary" type="button" id="add_pic">添加一份照片</button>
+            <div id="addpic">
+
+            </div>
         <h1 class="col-10" style="text-align: center;">Hello, world!</h1>
         <h1 class="col-2" style="text-align: end;">okay11</h1>
     </div>
@@ -155,6 +156,26 @@
                     <img style="display:none;max-height:100%;max-width:100%" src="#" class="pimg" id="pic" onclick="pic_f()">\
                   </td>\
                   ');
+    }
+
+     /**
+     * 上傳圖片並預覽
+     */
+     function show_preview(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function c(e) {
+                var img = $(input).parent().find('img');
+                img.attr('src', e.target.result);
+                img.css('display', 'inline');
+            }
+            //    var src=reader.onload;
+            //     console.log(src);
+            reader.readAsDataURL(input.files[0]);
+            // var k=readAsDataURL(input.files[0]);
+
+        }
     }
 
 </script>
