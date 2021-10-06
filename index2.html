@@ -90,17 +90,17 @@
         </div>
     </header><!-- End Header -->
 
-    <div class="row" style="margin-top: 200px;">
-        <button class="col-1" onclick="add_pic()" class="btn btn-outline-secondary" type="button" id="add_pic">添加一份照片</button>
+    <div class="row" style="margin-top: 200px; text-align: center;">
+        <button class="col-2" onclick="add_pic()" class="btn btn-primary" type="button" id="add_pic">添加一份照片</button>
             <div id="addpic">
 
             </div>
         <h1 class="col-10" style="text-align: center;">Hello, world!</h1>
         <h1 class="col-2" style="text-align: end;">okay11</h1>
     </div>
-
-        <a href="index.html"><button  class="btn btn-primary align-text-top">返回</button></a>
-    
+    <div style="text-align: center;">
+        <a href="index.html"><button  class="btn btn-primary ">返回</button></a>
+    </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -161,7 +161,7 @@
      function show_preview(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
-
+            console.log(input.files,",",input.files[0])
             reader.onload = function c(e) {
                 var img = $(input).parent().find('img');
                 img.attr('src', e.target.result);
