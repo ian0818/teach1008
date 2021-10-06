@@ -90,11 +90,8 @@
         </div>
     </header><!-- End Header -->
 
-       
-    
-
     <div class="row" style="margin-top: 200px;">
-        <button class="col" onclick="add_pic()" class="btn btn-outline-secondary" type="button" id="add_pic">添加一份照片</button>
+        <button class="col-1" onclick="add_pic()" class="btn btn-outline-secondary" type="button" id="add_pic">添加一份照片</button>
             <div id="addpic">
 
             </div>
@@ -102,7 +99,7 @@
         <h1 class="col-2" style="text-align: end;">okay11</h1>
     </div>
 
-        <a href="index.html"><button  class="btn btn-primary text-center">返回</button></a>
+        <a href="index.html"><button  class="btn btn-primary align-text-top">返回</button></a>
     
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -151,7 +148,7 @@
     });
 
     function add_pic(){
-        $('#shoes_picture').append('<td rowspan="2">\
+        $('#addpic').append('<td rowspan="2">\
                   <input id="shoes_file" onchange="show_preview(this)" type="file" accept="image/gif, image/jpeg, image/png">\
                     <img style="display:none;max-height:100%;max-width:100%" src="#" class="pimg" id="pic" onclick="pic_f()">\
                   </td>\
