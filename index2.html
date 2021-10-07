@@ -206,6 +206,7 @@
      function show_preview(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
+            reader.readAsDataURL(input.files[0]);
             reader.onload = function c(e) {
                 var img = $(input).parent().find('img');
                 console.log("input.parent",$(input).parent(),",", e.target.result)
@@ -214,7 +215,7 @@
             }
             //    var src=reader.onload;
             //     console.log(src);
-            reader.readAsDataURL(input.files[0]);
+            
 
             // var k=readAsDataURL(input.files[0]);
 
