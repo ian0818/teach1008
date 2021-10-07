@@ -55,7 +55,7 @@
                             <form>
                                 <div class="form-group">
                                     <div style="text-align:left">
-                                    <label for="recipient-name" class="col-form-label">流水號: </label>
+                                    <label for="recipient-name" class="col-form-label">流水號: &nbsp;</label>
                                     </div>
                                     <input type="text" class="form-control"
                                         id="modal_serial_number">
@@ -155,7 +155,7 @@
         $('#exampleModal').show();
     }, true);
 
-    //button點擊model內部值
+    //model button點擊model內部值
     function modal_set_serial(){
         const text = document.getElementById("modal_serial_number").value
         console.log(text)
