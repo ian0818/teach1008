@@ -189,7 +189,7 @@
         count++
         $('#addpic').append('<div id="remove_id'+ count +'">\
                   <input id="shoes_file" onchange="show_preview(this)" type="file" accept="image/gif, image/jpeg, image/png">\
-                    <img style="display:none;max-height:10%;max-width:20%" src="#" class="pimg" id="pic" onclick="pic_f()"></div>\
+                    <img style="display:none;max-height:10%;max-width:20%" src="#" class="pimg" id="pic"></div>\
                   ');
                   
     }
@@ -199,11 +199,11 @@
      */
      function show_preview(input) {
         if (input.files && input.files[0]) {
+            console.log(input.files)
             var reader = new FileReader();
             reader.readAsDataURL(input.files[0]);
             reader.onload = function c(e) {
                 var img = $(input).parent().find('img');
-                console.log("input.parent",$(input).parent(),",", e.target.result)
                 img.attr('src', e.target.result);
                 img.css('display', 'inline');
             }
