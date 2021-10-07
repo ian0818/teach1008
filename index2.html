@@ -92,12 +92,11 @@
 
     <div class="row" style="margin-top: 200px; text-align: center;">
         <button class="col-2" onclick="add_pic()" class="btn btn-primary" type="button" id="add_pic">添加一份照片</button>
+    </div>
             <div id="addpic">
 
             </div>
-        <h1 class="col-10" style="text-align: center;">Hello, world!</h1>
-        <h1 class="col-2" style="text-align: end;">okay11</h1>
-    </div>
+    
     <div style="text-align: center;">
         <a href="index.html"><button  class="btn btn-primary ">返回</button></a>
     </div>
@@ -160,18 +159,17 @@
      */
      function show_preview(input) {
         if (input.files && input.files[0]) {
-            const k = input.files && input.files[0]
-            console.log("K:",k)
             var reader = new FileReader();
-            console.log(input.files,",",input.files[0],",",typeof input.files,",",typeof input.files[0])
             reader.onload = function c(e) {
                 var img = $(input).parent().find('img');
+                console.log("input.parent",$(input).parent())
                 img.attr('src', e.target.result);
                 img.css('display', 'inline');
             }
             //    var src=reader.onload;
             //     console.log(src);
             reader.readAsDataURL(input.files[0]);
+            console.log("URL:",reader.readAsDataURL(input.files[0]))
             // var k=readAsDataURL(input.files[0]);
 
         }
