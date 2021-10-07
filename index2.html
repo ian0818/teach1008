@@ -91,7 +91,7 @@
     </header><!-- End Header -->
 
     <div class="row" style="margin-top: 200px; text-align: center;">
-        <button class="col-2" onclick="add_pic()" class="btn btn-primary" type="button" id="add_pic">添加一份照片</button>
+        <button onclick="add_pic()" class="btn btn-primary" type="button" id="add_pic">添加一份照片</button>
     </div>
             <div id="addpic">
 
@@ -147,7 +147,7 @@
     });
 
     function add_pic(){
-        $('#addpic').append('<\
+        $('#addpic').append('\
                   <input id="shoes_file" onchange="show_preview(this)" type="file" accept="image/gif, image/jpeg, image/png">\
                     <img style="display:none;max-height:100%;max-width:100%" src="#" class="pimg" id="pic" onclick="pic_f()">\
                   ');
